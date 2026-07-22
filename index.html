@@ -3,315 +3,368 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>N. Dhanaraj — 44 Years of Thol Bommalattam</title>
-<meta name="description" content="Shri N. Dhanaraj of Dharapuram, Tamil Nadu — retired headmaster and puppeteer who has kept the traditional art of Thol Bommalattam alive through 2,000+ free performances over 44 years.">
+<title>Dr. N. Dhanaraj — 44 Years of Thol Bommalattam</title>
+<meta name="description" content="Dr. N. Dhanaraj of Dharapuram, Tamil Nadu — retired headmaster and puppeteer who has kept the traditional art of Thol Bommalattam alive through 2,000+ free performances over 44 years.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Archivo:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#150A0F;
-  --velvet:#241119;
-  --stage:#2E1620;
-  --muslin:#F3EADD;
-  --dust:#A38E93;
-  --brass:#C0913F;
-  --sindoor:#DC4230;
+  --bg:#FBFAF7;
+  --bg-2:#F4F2EC;
+  --ink:#141310;
+  --gray:#6E6A61;
+  --hair:#E4E1D8;
+  --gold:#A98B5F;
+  --dark:#161512;
 
-  --display:"Bodoni Moda", Georgia, serif;
-  --body:"Archivo", system-ui, sans-serif;
-  --tamil:"Noto Sans Tamil", sans-serif;
-
-  --gut:clamp(20px,5vw,64px);
+  --display:"Cormorant Garamond", Georgia, serif;
+  --body:"Inter", system-ui, sans-serif;
+  --gut:clamp(22px,6vw,88px);
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--ink);
-  color:var(--muslin);
-  font-family:var(--body);
-  font-size:16px;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  background:var(--bg);color:var(--ink);
+  font-family:var(--body);font-size:15.5px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-
-body::after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:9;
-  opacity:.055;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+img{display:block}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 
 .eyebrow{
-  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--brass);font-weight:600;
+  font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
 }
-.tamil{font-family:var(--tamil)}
-.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(192,145,63,.45),transparent)}
+.rule{height:1px;background:var(--hair);margin-top:26px}
 
 /* ── nav ───────────────────────────────── */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:20;
   display:flex;align-items:center;justify-content:space-between;
-  padding:18px var(--gut);
-  backdrop-filter:blur(14px);
-  background:linear-gradient(180deg,rgba(21,10,15,.9),rgba(21,10,15,0));
+  padding:20px var(--gut);
+  background:rgba(251,250,247,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--hair);
 }
-.brand{font-family:var(--display);font-size:17px;letter-spacing:.14em;text-transform:uppercase}
-.nav-links{display:flex;gap:26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
-.nav-links a:hover{color:var(--muslin)}
-@media(max-width:860px){.nav-links{display:none}}
+.brand{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:.16em;text-transform:uppercase}
+.nav-links{display:flex;gap:30px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);font-weight:500}
+.nav-links a{padding-bottom:3px;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.nav-links a:hover{color:var(--ink);border-color:var(--gold)}
+@media(max-width:960px){.nav-links{display:none}}
 
 /* ── hero ──────────────────────────────── */
 .hero{
-  position:relative;min-height:100svh;
-  padding:0 var(--gut) 60px;
-  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--gut);
-  align-items:end;
-  background:radial-gradient(120% 90% at 50% -10%,rgba(192,145,63,.13),transparent 60%);
+  min-height:92svh;
+  padding:clamp(120px,15vh,160px) var(--gut) clamp(50px,7vh,90px);
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:clamp(36px,6vw,90px);align-items:center;
 }
-.rig{position:relative;padding-top:150px}
-
-.crossbar{
-  position:absolute;top:96px;left:6px;
-  width:190px;height:9px;
-  background:linear-gradient(180deg,#8C6B33,#5C4320);
-  border-radius:2px;
-  transform-origin:center;
-  transition:transform .9s cubic-bezier(.22,1,.36,1);
-  box-shadow:0 6px 18px rgba(0,0,0,.5);
-}
-.crossbar::before{
-  content:"";position:absolute;left:50%;bottom:100%;
-  width:1px;height:96px;background:linear-gradient(180deg,transparent,var(--brass));
-}
-
 .title{
-  font-family:var(--display);font-weight:400;
-  font-size:clamp(42px,7.6vw,104px);
-  line-height:.92;letter-spacing:-.02em;
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(52px,8vw,116px);
+  line-height:1.0;letter-spacing:-.01em;
 }
-.word{
-  display:block;position:relative;
-  transform-origin:top center;
-  padding-top:34px;
-  transition:transform 1.2s cubic-bezier(.22,1,.36,1);
-}
-.word::before{
-  content:"";position:absolute;top:0;left:12%;
-  width:1px;height:34px;background:var(--brass);opacity:.55;
-}
-.word:nth-child(2){padding-left:.7em}
-.word:nth-child(2)::before{left:calc(.7em + 12px)}
-.word:nth-child(3){padding-left:1.4em}
-.word:nth-child(3)::before{left:calc(1.4em + 12px)}
-.word em{font-style:italic;color:var(--brass)}
-
-.hero-tamil{
-  margin-top:26px;font-family:var(--tamil);
-  font-size:clamp(15px,1.7vw,20px);color:var(--brass);letter-spacing:.04em;
-}
-.hero-sub{
-  margin-top:14px;max-width:44ch;color:var(--dust);
-  font-size:clamp(14px,1.4vw,17px);
-}
+.title em{font-style:italic;font-weight:400;color:var(--gold)}
+.hero-sub{margin-top:30px;max-width:44ch;color:var(--gray);font-size:clamp(15px,1.3vw,17px);font-weight:400}
 .hero-meta{
-  display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;
-  font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dust);
+  display:flex;gap:0;flex-wrap:wrap;margin-top:44px;
+  border-top:1px solid var(--hair);
 }
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.hero-meta span::before{content:"";width:5px;height:5px;background:var(--sindoor);border-radius:50%}
-
-.hero-slot{aspect-ratio:3/4;margin-bottom:8px}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr;align-items:start;padding-top:0}
-  .rig{padding-top:130px}
-  .crossbar{width:130px}
-  .hero-slot{aspect-ratio:4/5}
+.hero-meta span{
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);font-weight:500;
+  padding:16px 34px 0 0;
+}
+.hero-photo{position:relative;justify-self:end;width:min(100%,440px)}
+.hero-photo img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;
+  filter:saturate(.92);
+}
+.hero-photo::after{
+  content:"";position:absolute;inset:14px -14px -14px 14px;
+  border:1px solid var(--hair);z-index:-1;
+}
+.stamp{display:none}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:108px;gap:44px}
+  .hero-photo{justify-self:center;width:min(86%,400px)}
 }
 
 /* ── image slots ───────────────────────── */
 .slot{
   position:relative;width:100%;
-  background:
-    linear-gradient(135deg,rgba(192,145,63,.09),rgba(220,66,48,.05)),
-    var(--stage);
-  border:1px solid rgba(192,145,63,.22);
-  display:grid;place-items:center;
-  overflow:hidden;
+  background:var(--bg-2);
+  display:grid;place-items:center;overflow:hidden;
 }
 .slot::after{
   content:attr(data-slot);
   font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--dust);text-align:center;padding:0 14px;
+  color:var(--gray);text-align:center;padding:0 12px;
 }
-.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.slot:has(img)::after{display:none}
+.slot img,.slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot:has(img)::after,.slot:has(video)::after{display:none}
 
 /* ── marquee ───────────────────────────── */
 .tour{
-  border-top:1px solid rgba(192,145,63,.2);
-  border-bottom:1px solid rgba(192,145,63,.2);
-  background:var(--velvet);
-  padding:16px 0;overflow:hidden;white-space:nowrap;
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+  padding:18px 0;overflow:hidden;white-space:nowrap;background:var(--bg);
 }
-.tour-track{display:inline-flex;gap:52px;animation:slide 46s linear infinite}
+.tour-track{display:inline-flex;gap:64px;animation:slide 50s linear infinite}
 .tour-track span{
-  font-family:var(--display);font-size:15px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--dust);
+  font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gray);
 }
-.tour-track span::after{content:"✦";margin-left:52px;color:var(--brass);font-size:10px;vertical-align:middle}
+.tour-track span::after{content:"·";margin-left:64px;color:var(--gold)}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ── sections ──────────────────────────── */
-.section{padding:clamp(80px,11vw,150px) var(--gut);position:relative}
-.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:14px;flex-wrap:wrap}
+.section{padding:clamp(84px,11vw,150px) var(--gut);position:relative}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:6px;flex-wrap:wrap}
 .section-title{
-  font-family:var(--display);font-weight:400;
-  font-size:clamp(30px,4.4vw,58px);line-height:1.05;letter-spacing:-.01em;
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(34px,4.6vw,62px);line-height:1.05;letter-spacing:-.005em;
 }
-.section-note{color:var(--dust);font-size:14px;max-width:36ch}
+.section-note{color:var(--gray);font-size:13.5px;max-width:36ch}
 
-/* ── big numbers ───────────────────────── */
+/* ── ledger ────────────────────────────── */
 .ledger{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:1px;background:rgba(192,145,63,.2);
-  border:1px solid rgba(192,145,63,.2);
-  margin-top:0;
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
 }
-.ledger-cell{background:var(--ink);padding:34px 24px;text-align:center}
-.ledger-num{font-family:var(--display);font-size:clamp(38px,4.5vw,58px);color:var(--muslin);line-height:1}
-.ledger-num em{font-style:normal;color:var(--brass)}
-.ledger-label{margin-top:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dust)}
+.ledger-cell{padding:44px 24px;text-align:center;border-right:1px solid var(--hair)}
+.ledger-cell:last-child{border-right:none}
+.ledger-num{font-family:var(--display);font-weight:500;font-size:clamp(44px,5vw,68px);line-height:1}
+.ledger-num em{font-style:normal;color:var(--gold)}
+.ledger-label{margin-top:12px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gray);font-weight:500}
+@media(max-width:640px){.ledger-cell{border-right:none;border-bottom:1px solid var(--hair)}.ledger-cell:last-child{border-bottom:none}}
 
-/* ── about / story ─────────────────────── */
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,80px);align-items:start}
-.about-slot{aspect-ratio:3/4;position:sticky;top:100px}
-.about p{margin-top:22px;color:var(--dust);font-size:15.5px;max-width:56ch}
+/* ── story ─────────────────────────────── */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,96px);align-items:start}
+.about-slot{aspect-ratio:3/4;position:sticky;top:110px}
+.about p{margin-top:22px;color:var(--gray);font-size:15.5px;max-width:58ch}
 .about p:first-of-type{
-  color:var(--muslin);font-family:var(--display);
-  font-size:clamp(20px,2.3vw,28px);line-height:1.4;
+  color:var(--ink);font-family:var(--display);font-weight:400;
+  font-size:clamp(22px,2.4vw,30px);line-height:1.5;
 }
 .about p:first-of-type::first-letter{
-  float:left;font-size:3.4em;line-height:.82;padding:6px 12px 0 0;color:var(--brass);
+  float:left;font-size:3.6em;line-height:.8;padding:8px 14px 0 0;color:var(--gold);font-weight:500;
 }
-@media(max-width:820px){.about{grid-template-columns:1fr}.about-slot{position:static}}
+@media(max-width:860px){.about{grid-template-columns:1fr}.about-slot{position:static}}
+
+.archival{margin:56px 0 8px}
+.archival figcaption{margin-top:14px;font-size:12.5px;color:var(--gray);max-width:74ch;letter-spacing:.02em}
 
 /* ── milestones ────────────────────────── */
-.miles{margin-top:64px;position:relative;padding-left:26px}
-.miles::before{
-  content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;
-  background:linear-gradient(180deg,var(--brass),transparent);opacity:.5;
-}
-.mile{position:relative;padding:0 0 36px 26px}
+.miles{margin-top:64px;position:relative;padding-left:32px;border-left:1px solid var(--hair)}
+.mile{position:relative;padding:0 0 44px 30px}
 .mile::before{
-  content:"";position:absolute;left:-30px;top:8px;
-  width:9px;height:9px;border-radius:50%;
-  background:var(--ink);border:1px solid var(--brass);
+  content:"";position:absolute;left:-35.5px;top:9px;
+  width:7px;height:7px;border-radius:50%;background:var(--gold);
 }
-.mile-year{font-family:var(--display);font-size:15px;color:var(--brass);letter-spacing:.1em}
-.mile-title{font-family:var(--display);font-size:clamp(18px,2vw,23px);margin:4px 0 6px}
-.mile p{color:var(--dust);font-size:14px;max-width:56ch;margin:0}
-
-.archival{margin:48px 0 8px}
-.archival figcaption{
-  margin-top:14px;font-size:12.5px;color:var(--dust);
-  letter-spacing:.03em;max-width:70ch;
-}
+.mile-year{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.mile-title{font-family:var(--display);font-weight:500;font-size:clamp(21px,2.2vw,28px);margin:8px 0 8px}
+.mile p{color:var(--gray);font-size:14.5px;max-width:62ch;margin:0}
 
 /* ── film ──────────────────────────────── */
-.film{padding:0}
-.film-slot{aspect-ratio:16/9;border-left:none;border-right:none}
-.film-slot video,.film-slot iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.film{padding:clamp(70px,9vw,110px) var(--gut);background:var(--dark)}
+.film-slot{aspect-ratio:16/9;max-width:1040px;margin:0 auto;background:#000}
 .film-caption{
-  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
-  padding:16px var(--gut);color:var(--dust);
-  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-  border-bottom:1px solid rgba(192,145,63,.2);
+  max-width:1040px;margin:20px auto 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  color:#8D897F;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;
 }
 
 /* ── honours ───────────────────────────── */
-.honours{background:var(--velvet);border-top:1px solid rgba(192,145,63,.2);border-bottom:1px solid rgba(192,145,63,.2)}
-.honour-list{margin-top:48px;border-top:1px solid rgba(192,145,63,.2)}
+.honours{background:var(--bg-2)}
+.honour-list{margin-top:52px;border-top:1px solid var(--hair)}
 .honour{
-  display:grid;grid-template-columns:96px 1fr auto;gap:24px;align-items:center;
-  padding:22px 0;border-bottom:1px solid rgba(192,145,63,.14);
-  transition:padding-left .4s,background .4s;
+  display:grid;grid-template-columns:110px 1fr auto;gap:26px;align-items:center;
+  padding:24px 4px;border-bottom:1px solid var(--hair);
+  transition:padding-left .35s;
 }
-.honour:hover{padding-left:14px;background:rgba(192,145,63,.05)}
-.honour-year{font-family:var(--display);font-size:15px;color:var(--brass);letter-spacing:.08em}
-.honour-name{font-family:var(--display);font-size:clamp(17px,2vw,23px)}
-.honour-by{font-size:12px;color:var(--dust);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.honour:hover{padding-left:18px}
+.honour-year{font-family:var(--display);font-weight:500;font-size:18px;color:var(--gold)}
+.honour-name{font-family:var(--display);font-weight:500;font-size:clamp(19px,2.1vw,25px)}
+.honour-by{font-size:10.5px;color:var(--gray);letter-spacing:.18em;text-transform:uppercase;margin-top:4px;font-weight:500}
 .honour-tag{
-  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  border:1px solid rgba(192,145,63,.3);color:var(--brass);
-  padding:4px 10px;white-space:nowrap;
+  font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--hair);color:var(--gray);
+  padding:6px 13px;white-space:nowrap;
 }
-@media(max-width:640px){
-  .honour{grid-template-columns:1fr;gap:6px}
-  .honour-tag{justify-self:start}
+@media(max-width:640px){.honour{grid-template-columns:1fr;gap:6px}.honour-tag{justify-self:start}}
+
+/* ── rainbow facts + chips ─────────────── */
+.rainbow-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:52px;border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
+.rf-cell{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:30px 26px;background:var(--bg)}
+.rf-cell dt{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:600}
+.rf-cell dd{font-size:14px;color:var(--gray)}
+.chips{display:flex;flex-wrap:wrap;gap:0;margin-top:30px;max-width:900px}
+.chip{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--gray);
+  padding:9px 18px;border:1px solid var(--hair);margin:-1px 0 0 -1px;background:var(--bg);
 }
 
-/* ── gallery ───────────────────────────── */
-.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(10px,1.4vw,20px);margin-top:56px}
-.g1{grid-column:span 5;aspect-ratio:4/5}
-.g2{grid-column:span 7;aspect-ratio:16/10}
-.g3{grid-column:span 4;aspect-ratio:1}
-.g4{grid-column:span 4;aspect-ratio:1}
-.g5{grid-column:span 4;aspect-ratio:1}
-.g6{grid-column:span 7;aspect-ratio:16/10}
-.g7{grid-column:span 5;aspect-ratio:4/5}
-@media(max-width:760px){
-  .g1,.g2,.g6,.g7{grid-column:span 12}
-  .g3,.g4,.g5{grid-column:span 6}
-  .g5{grid-column:span 12}
+/* ── photo grid ────────────────────────── */
+.pgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:10px;margin-top:44px;
 }
+.ph{position:relative;margin:0;overflow:hidden;background:var(--bg-2)}
+.ph img{
+  width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;
+  cursor:zoom-in;display:block;
+  transition:transform .5s ease,filter .5s ease;
+  filter:saturate(.94);
+}
+.ph:hover img{transform:scale(1.04);filter:saturate(1)}
+.ph figcaption{display:none}
+@media(min-width:700px){
+  .pgrid{grid-template-columns:repeat(4,1fr);gap:12px}
+  .ph:first-child{grid-column:span 2;grid-row:span 2}
+}
+.tap-hint{margin-top:16px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gray);font-weight:500}
+@media(min-width:961px){.tap-hint{display:none}}
 
-/* ── words / testimony ─────────────────── */
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(24px,4vw,60px);margin-top:56px}
-.quote{position:relative;padding-top:38px}
-.quote::before{
-  content:"“";position:absolute;top:-6px;left:-6px;
-  font-family:var(--display);font-size:74px;color:var(--brass);opacity:.45;line-height:1;
-}
-.quote blockquote{
-  font-family:var(--display);font-style:italic;
-  font-size:clamp(17px,1.9vw,22px);line-height:1.45;
-}
-.quote cite{
-  display:block;margin-top:16px;font-style:normal;
-  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dust);
-}
+/* ── quotes ────────────────────────────── */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(28px,5vw,64px);margin-top:56px}
+.quote{position:relative;padding-top:26px;border-top:1px solid var(--hair)}
+.quote::before{content:"";position:absolute;top:-1px;left:0;width:56px;height:1px;background:var(--gold)}
+.quote blockquote{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(18px,2vw,23px);line-height:1.55}
+.quote cite{display:block;margin-top:16px;font-style:normal;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gray);font-weight:500}
+
+/* ── eddy trust ────────────────────────── */
+.trust{background:var(--dark);color:#CFCBC1}
+.trust .section-title{color:#F4F2EC}
+.trust .section-note{color:#8D897F}
+.trust .rule{background:#2C2A25}
+.trust-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,6vw,90px);margin-top:44px;align-items:start}
+.trust p{color:#9B968B;font-size:15px;margin-top:20px;max-width:58ch}
+.trust p:first-of-type{margin-top:0;color:#F4F2EC;font-family:var(--display);font-weight:400;font-size:clamp(20px,2.2vw,27px);line-height:1.55}
+.trustees{border-top:1px solid #2C2A25}
+.trustee{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid #2C2A25;font-size:14px;color:#CFCBC1}
+.trustee em{font-style:normal;color:var(--gold);font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.trustees-title{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+.trust-contact{margin-top:26px;font-size:14px;color:#9B968B;line-height:2.2}
+.trust-contact a{color:#F4F2EC;border-bottom:1px solid var(--gold);padding-bottom:1px}
+@media(max-width:860px){.trust-grid{grid-template-columns:1fr}}
 
 /* ── closing ───────────────────────────── */
-.closing{
-  text-align:center;
-  background:radial-gradient(90% 100% at 50% 110%,rgba(192,145,63,.14),transparent 65%);
-}
-.closing .section-title{font-size:clamp(32px,5.6vw,74px);margin:16px 0 22px}
-.closing .section-title em{font-style:italic;color:var(--brass)}
-.closing-note{color:var(--dust);max-width:52ch;margin:0 auto 36px}
-.socials{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.closing{text-align:center}
+.closing .section-title{font-size:clamp(36px,5.8vw,78px);margin:20px 0 24px}
+.closing .section-title em{font-style:italic;font-weight:400;color:var(--gold)}
+.closing-note{color:var(--gray);max-width:54ch;margin:0 auto 40px;font-size:15px}
+.socials{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
 .social{
-  border:1px solid rgba(192,145,63,.35);color:var(--brass);
-  padding:12px 26px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  border:1px solid var(--ink);color:var(--ink);
+  padding:15px 34px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
   transition:background .3s,color .3s;
 }
-.social:hover{background:var(--brass);color:var(--ink)}
+.social:hover{background:var(--ink);color:var(--bg)}
 
 /* ── footer ────────────────────────────── */
 .footer{
-  padding:44px var(--gut);
+  padding:36px var(--gut);
   display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
-  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dust);
-  border-top:1px solid rgba(192,145,63,.15);
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);font-weight:500;
+  border-top:1px solid var(--hair);
 }
-.footer a:hover{color:var(--brass)}
+.footer a:hover{color:var(--gold)}
+
+/* ── tabs ──────────────────────────────── */
+.tabs{display:flex;gap:0;margin-top:40px;border-bottom:1px solid var(--hair)}
+.tab{
+  background:none;border:none;cursor:pointer;
+  font-family:var(--body);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  color:var(--gray);padding:14px 26px 14px 2px;margin-right:26px;
+  border-bottom:1px solid transparent;margin-bottom:-1px;
+  transition:color .3s,border-color .3s;
+}
+.tab sup{color:var(--gold);font-size:9px;margin-left:4px}
+.tab.active{color:var(--ink);border-bottom-color:var(--ink)}
+.tab:hover{color:var(--ink)}
+.panel{margin-top:8px}
+.panel.hidden{display:none}
+
+/* ── video item ────────────────────────── */
+.video-item{margin-top:44px;max-width:1000px}
+.video-item video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.video-item figcaption{
+  display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  margin-top:14px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gray);font-weight:500;
+  border-left:2px solid var(--gold);padding-left:12px;
+}
+
+/* ── lightbox ──────────────────────────── */
+.lightbox{
+  position:fixed;inset:0;z-index:60;
+  background:rgba(20,19,16,.96);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:5vh 5vw;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:80vh;object-fit:contain}
+.lb-cap{margin-top:16px;color:#CFCBC1;font-size:13px;max-width:70ch;text-align:center}
+.lb-close{
+  position:absolute;top:20px;right:26px;
+  background:none;border:none;color:#F4F2EC;font-size:34px;cursor:pointer;line-height:1;
+}
+.lb-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(251,250,247,.1);border:1px solid rgba(251,250,247,.35);
+  color:#F4F2EC;font-size:18px;cursor:pointer;
+  display:grid;place-items:center;z-index:2;
+}
+.lb-prev{left:14px}.lb-next{right:14px}
+.lb-arrow:hover{background:rgba(251,250,247,.22)}
+.lb-count{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#8D897F;font-size:11px;letter-spacing:.24em}
+@media(max-width:640px){.lb-arrow{width:44px;height:44px}.lb-prev{left:8px}.lb-next{right:8px}}
+
+/* ── mobile menu ───────────────────────── */
+.menu-btn{
+  display:none;background:none;border:none;cursor:pointer;
+  width:40px;height:40px;position:relative;
+}
+.menu-btn span{
+  position:absolute;left:8px;right:8px;height:1.5px;background:var(--ink);
+  transition:transform .3s,top .3s,opacity .3s;
+}
+.menu-btn span:nth-child(1){top:15px}
+.menu-btn span:nth-child(2){top:24px}
+.menu-btn.open span:nth-child(1){top:19px;transform:rotate(45deg)}
+.menu-btn.open span:nth-child(2){top:19px;transform:rotate(-45deg)}
+@media(max-width:960px){.menu-btn{display:block}}
+.mobile-menu{
+  position:fixed;top:73px;left:0;right:0;z-index:19;
+  background:var(--bg);border-bottom:1px solid var(--hair);
+  display:none;flex-direction:column;
+  padding:10px var(--gut) 26px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{
+  padding:15px 0;border-bottom:1px solid var(--hair);
+  font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--ink);
+}
+.mobile-menu a:last-child{border-bottom:none}
+
+/* ── archive & downloads ───────────────── */
+.dl-bar{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:36px}
+.dl-all{
+  background:var(--ink);color:var(--bg);
+  padding:15px 30px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  transition:background .3s;
+}
+.dl-all:hover{background:var(--gold)}
+.dl-count{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);font-weight:500}
+.arch-note{margin-top:30px;font-size:12.5px;color:var(--gray);letter-spacing:.04em}
+.lb-dl{
+  position:absolute;top:20px;left:26px;z-index:2;
+  border:1px solid rgba(251,250,247,.4);color:#F4F2EC;background:rgba(251,250,247,.08);
+  padding:10px 20px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+}
+.lb-dl:hover{background:rgba(251,250,247,.2)}
 
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -322,36 +375,43 @@ a{color:inherit;text-decoration:none}
 <body>
 
 <nav class="nav">
-  <a href="#" class="brand">N. Dhanaraj</a>
+  <a href="#" class="brand">Dr. N. Dhanaraj</a>
   <div class="nav-links">
     <a href="#story">The Story</a>
     <a href="#journey">Journey</a>
-    <a href="#film">Film</a>
     <a href="#honours">Honours</a>
+    <a href="#rainbow">Rainbow Puppetry</a>
     <a href="#gallery">Gallery</a>
-    <a href="#words">In Their Words</a>
+    <a href="#archive-dl">Archive</a>
+    <a href="#trust">Eddy Trust</a>
   </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#story">The Story</a>
+  <a href="#journey">Journey</a>
+  <a href="#honours">Honours</a>
+  <a href="#rainbow">Rainbow Puppetry</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#archive-dl">Archive &amp; Downloads</a>
+  <a href="#trust">Eddy Trust</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
-  <div class="rig">
-    <div class="crossbar" id="crossbar"></div>
-    <h1 class="title">
-      <span class="word">Leather,</span>
-      <span class="word">lamplight,</span>
-      <span class="word"><em>legacy.</em></span>
-    </h1>
-    <p class="hero-tamil tamil">தோல் பொம்மலாட்டம் — தமிழரின் பாரம்பரியக் கலை</p>
-    <p class="hero-sub">For forty-four years, a school headmaster from Dharapuram has kept Thol Bommalattam — Tamil Nadu's traditional shadow puppetry — alive. Over 2,000 performances. Every one of them free.</p>
+  <div class="hero-copy">
+    <p class="eyebrow">Puppeteer — Teacher — Dharapuram, India</p>
+    <h1 class="title">Leather, lamplight, <em>legacy.</em></h1>
+    <p class="hero-sub">For forty-four years, Dr. N. Dhanaraj — teacher, headmaster and puppeteer of Dharapuram — has kept Tamil Nadu's traditional art of puppetry alive. More than 2,000 performances. Every one of them free.</p>
     <div class="hero-meta">
       <span>44 years of service to the art</span>
       <span>2,000+ performances</span>
       <span>Dharapuram, Tamil Nadu</span>
     </div>
   </div>
-  <div class="slot hero-slot">
-    <img src="images/hero.jpg" alt="Shri N. Dhanaraj seated with a glove puppet on each hand, holding the CCRT 'Two Fools' booklet">
+  <div class="hero-photo">
+    <img src="images/hero.jpg" alt="Dr. N. Dhanaraj seated with a glove puppet on each hand, holding the CCRT 'Two Fools' booklet">
+    <span class="stamp">Since 1982</span>
   </div>
 </header>
 
@@ -374,14 +434,20 @@ a{color:inherit;text-decoration:none}
 <!-- STORY -->
 <section class="section about" id="story">
   <div class="slot about-slot">
-    <img src="images/portrait.jpg" alt="Shri N. Dhanaraj addressing an audience in front of the Rainbow Puppeteers stage">
+    <img src="images/portrait-formal.jpg" alt="Dr. N. Dhanaraj — formal portrait">
   </div>
   <div>
     <p class="eyebrow">The story</p>
-    <p>In 1982, a young government school teacher from Periyar District travelled to Delhi for a Centre for Cultural Resources and Training course on puppetry in education. He came home with a conviction that never left him: a puppet can teach what a lecture cannot.</p>
-    <p>What began as a classroom aid became a life's mission. Evenings after school, holidays, and every year of his retirement — Shri Dhanaraj carried his puppets to villages, schools, colleges and community centres across Tamil Nadu. His shows taught history through Samrat Ashoka, morality through parables, and carried awareness on AIDS, child labour, the environment and women's rights to audiences no textbook could reach.</p>
-    <p>He worked with the National Service Scheme, Rotary International, church child-care councils, adult education movements and rural development projects — anyone whose message needed to reach people's hearts. He trained hundreds of teachers and child-care workers to make and use puppets themselves, so the art would not end with him.</p>
-    <p>He never charged for a single performance. In an age when traditional arts survive by commodifying themselves, he chose the opposite path: give the art away, freely, for forty-four years, so that it lives.</p>
+    <p>Born in 1951 at Dharapuram, Dhanaraj trained as a teacher at the Government Teacher Training School there, took his M.A. in History from Madras University and his M.Ed. from Annamalai University. In 1982, a young teacher by then, he travelled to Delhi for the Centre for Cultural Resources and Training course on puppetry in education — and came home with a conviction that never left him: a puppet can teach what a lecture cannot.</p>
+    <p>He served Tamil Nadu's government schools for thirty-one years — assistant teacher from 1978, headmaster from 1988 until retirement in 2010. Through all of it, and through every year since, his evenings, holidays and retirement have belonged to the puppets.</p>
+    <p>His shows carried awareness where textbooks could not reach: child labour and child rights, women's rights and human rights, the evils of dowry, health and hygiene, rainwater harvesting, afforestation, pollution and plastic, civic values, and above all the importance of education. He performed across Tamil Nadu — district by district, taluk by taluk — alongside voluntary organisations and NGOs, and trained hundreds of teachers and child-care workers to make and use puppets themselves, so the art would not end with him.</p>
+    <p>He has never charged for a single performance. In an age when traditional arts survive by commodifying themselves, he chose the opposite path: give the art away, freely, for forty-four years, so that it lives.</p>
+    <figure class="archival" style="margin-top:40px">
+      <div class="slot" style="aspect-ratio:5/4">
+        <img src="images/family.jpg" alt="Dr. N. Dhanaraj at home in Dharapuram with his family, beside the nameboard reading N. Dhanaraj M.A., M.Ed.">
+      </div>
+      <figcaption>At home in Dharapuram — Dr. Dhanaraj with his wife Mrs. Inbaruby Jayakumari and their family, beside the nameboard that has stood at the door through it all: N. Dhanaraj, M.A., M.Ed.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -399,14 +465,24 @@ a{color:inherit;text-decoration:none}
     <div class="slot" style="aspect-ratio:16/10">
       <img src="images/archival-1982.jpg" alt="Group photograph of the CCRT Course on Puppetry for Education, New Delhi, June–July 1982">
     </div>
-    <figcaption>Where it all began — the Centre for Cultural Resources &amp; Training, Course on Puppetry for Education, New Delhi, 15 June to 20 July 1982. Shri Dhanaraj has kept this photograph for forty-four years.</figcaption>
+    <figcaption>Where it all began — the Centre for Cultural Resources &amp; Training, Course on Puppetry for Education, New Delhi, 15 June to 20 July 1982. Dr. Dhanaraj has kept this photograph for forty-four years.</figcaption>
   </figure>
 
   <div class="miles">
     <div class="mile">
+      <div class="mile-year">1951</div>
+      <div class="mile-title">Born in Dharapuram</div>
+      <p>Born on 15 November 1951 to Mr. Nesaiah and Mrs. Thayanithi. Schooled in Udumalpet and Dharapuram, then trained as a Secondary Grade Teacher, 1969–71.</p>
+    </div>
+    <div class="mile">
+      <div class="mile-year">1978</div>
+      <div class="mile-title">A teacher's life begins</div>
+      <p>Joined Tamil Nadu's government schools as an assistant teacher — the start of thirty-one years of service. Later completed an M.A. in History at Madras University and an M.Ed. at Annamalai University.</p>
+    </div>
+    <div class="mile">
       <div class="mile-year">1982</div>
       <div class="mile-title">Trained at CCRT, New Delhi</div>
-      <p>Completed the Course on Puppetry for Education at the Centre for Cultural Resources and Training — the beginning of everything. Returned for the refresher course in 1984.</p>
+      <p>Completed the Course on Puppetry for Education at the Centre for Cultural Resources and Training, and in the same year established Rainbow Puppetry — the banner under which every show since has travelled. Returned to CCRT for the refresher course in 1984.</p>
     </div>
     <div class="mile">
       <div class="mile-year">1988</div>
@@ -421,17 +497,27 @@ a{color:inherit;text-decoration:none}
     <div class="mile">
       <div class="mile-year">1990s</div>
       <div class="mile-title">The village decades</div>
-      <p>Hundreds of shows across Periyar District and beyond — schools, banks, festivals, NSS camps, women's guilds and rural development projects. Themes ranged from Ashoka's transformation to AIDS awareness and child labour. Founded the Rainbow Puppeteers and trained child-care workers across South India.</p>
+      <p>Hundreds of shows across Periyar District and beyond — schools, banks, festivals, NSS camps, women's guilds and rural development projects. Themes ranged from Ashoka's transformation to AIDS awareness and child labour, and he trained teachers and child-care workers across South India to carry the art forward.</p>
     </div>
     <div class="mile">
       <div class="mile-year">2007</div>
       <div class="mile-title">Silver Jubilee</div>
-      <p>Twenty-five years of puppet programmes, marked with a commemorative silver jubilee celebration of the work from 1982 to 2007.</p>
+      <p>Rainbow Puppetry marked twenty-five years — a commemorative silver jubilee of the work from 1982 to 2007. The golden jubilee now approaches in 2032.</p>
     </div>
     <div class="mile">
       <div class="mile-year">2008</div>
       <div class="mile-title">State's best teacher</div>
       <p>Received the Dr. Radhakrishnan Award from the Government of Tamil Nadu, and the Rotary Vocational Excellence Award in the same year.</p>
+    </div>
+    <div class="mile">
+      <div class="mile-year">2010</div>
+      <div class="mile-title">Retirement — and a second career</div>
+      <p>Retired after thirty-one years as teacher and headmaster. The puppets, till then an evening's calling, became his full-time life.</p>
+    </div>
+    <div class="mile">
+      <div class="mile-year">2011</div>
+      <div class="mile-title">Eddy Trust is founded</div>
+      <p>Registered at Dharapuram in memory of his son Edwin Paul Nathaniel, the trust became the vehicle for the free shows and for supporting the education of deserving students.</p>
     </div>
     <div class="mile">
       <div class="mile-year">2017</div>
@@ -441,30 +527,18 @@ a{color:inherit;text-decoration:none}
     <div class="mile">
       <div class="mile-year">2023</div>
       <div class="mile-title">Kalai Mudhumani</div>
-      <p>Named District Best Puppetry Artist by the Department of Art and Culture, Government of Tamil Nadu, and honoured with the Sevai Chemmal Award by the Tamil Nadu Tamil Sangam Makkal Mandram.</p>
+      <p>Named District Best Puppetry Artist by the Department of Art and Culture, Government of Tamil Nadu, and honoured with the Sevai Chemmal Award by the Tamil Nadu Tamil Sangam Makkal Mandram. The same year, carried his puppets to Manipur — performing at the Samathuva Pongal near the Moreh border, organised through the Tiruppur Tamil Sangam.</p>
     </div>
     <div class="mile">
       <div class="mile-year">2025</div>
       <div class="mile-title">Carrying Tamil heritage abroad</div>
-      <p>Performed in Siem Reap, Cambodia at the 1000th anniversary commemoration of Emperor Rajendra Chola's conquest of Kadaram, and organised the harmony-focused Samathuva Pongal at the Manipur–Moreh border through the Tiruppur Tamil Sangam.</p>
+      <p>Performed internationally in Siem Reap, Cambodia, at the 1000th anniversary commemoration of Emperor Rajendra Chola's conquest of Kadaram.</p>
     </div>
     <div class="mile">
       <div class="mile-year">Today</div>
       <div class="mile-title">The work continues</div>
       <p>Still performing, still teaching the next generation, still refusing to let a thousand-year-old art die. Recommended for the Padma Shri, 2027.</p>
     </div>
-  </div>
-</section>
-
-<!-- FILM -->
-<section class="film" id="film">
-  <div class="slot film-slot" data-slot="Performance video — YouTube embed or videos/show.mp4 · 16:9">
-    <!-- YouTube: <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Thol Bommalattam performance by N. Dhanaraj" allowfullscreen></iframe> -->
-    <!-- Self-hosted: <video src="videos/show.mp4" controls poster="images/video-poster.jpg"></video> -->
-  </div>
-  <div class="film-caption">
-    <span>Thol Bommalattam — a performance</span>
-    <span>Shadow, leather and lamplight</span>
   </div>
 </section>
 
@@ -522,26 +596,121 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section" id="gallery">
+<!-- RAINBOW PUPPETRY -->
+<section class="section" id="rainbow">
   <div class="section-head">
     <div>
-      <p class="eyebrow">The company</p>
-      <h2 class="section-title">Leather figures,<br>living stories</h2>
+      <p class="eyebrow">Since 1982</p>
+      <h2 class="section-title">Rainbow Puppetry</h2>
     </div>
-    <p class="section-note">Puppets cut, painted and strung by hand — some have been performing for four decades.</p>
+    <p class="section-note">One man, one troupe name, forty-four years — now marching towards its golden jubilee.</p>
   </div>
   <div class="rule"></div>
 
-  <div class="gallery">
-    <div class="slot g1"><img src="images/g1.jpg" alt="Glove puppets peeking over the Rainbow Puppeteers stage curtain"></div>
-    <div class="slot g2"><img src="images/g2.jpg" alt="A live puppet performance for schoolchildren behind the blue stage curtain"></div>
-    <div class="slot g3"><img src="images/g3.jpg" alt="Two hand-made glove puppets beside the CCRT Two Fools booklet that trained a generation"></div>
-    <div class="slot g4"><img src="images/g4.jpg" alt="Shri Dhanaraj honoured with a shawl by Rotary Dharapuram"></div>
-    <div class="slot g5"><img src="images/g5.jpg" alt="Two puppet characters above the curtain, mid-performance"></div>
-    <div class="slot g6"><img src="images/g6.jpg" alt="Teachers trained by Shri Dhanaraj holding their puppets before a classroom of children, 2026"></div>
-    <div class="slot g7"><img src="images/g7.jpg" alt="The Kalai Mudhumani award conferred by the Department of Art and Culture, Government of Tamil Nadu"></div>
+  <dl class="rainbow-facts">
+    <div class="rf-cell"><dt>Established</dt><dd>1982, the year of the CCRT training — maintained by Dr. Dhanaraj ever since</dd></div>
+    <div class="rf-cell"><dt>Performances</dt><dd>2,000+ shows at local, taluk, district, state, national and international levels</dd></div>
+    <div class="rf-cell"><dt>Silver Jubilee</dt><dd>Celebrated in 2007 — the golden jubilee arrives in 2032</dd></div>
+    <div class="rf-cell"><dt>Cost to audiences</dt><dd>Always free — the shows are run through Eddy Trust, Dharapuram</dd></div>
+  </dl>
+
+  <p style="margin-top:44px" class="eyebrow">Every show carries a message</p>
+  <div class="chips">
+    <span class="chip">Child rights</span>
+    <span class="chip">Women's rights</span>
+    <span class="chip">Human rights</span>
+    <span class="chip">Civil rights</span>
+    <span class="chip">Child labour</span>
+    <span class="chip">Historical characters</span>
+    <span class="chip">Environmental protection</span>
+    <span class="chip">Afforestation</span>
+    <span class="chip">Rainwater harvesting</span>
+    <span class="chip">Pollution control</span>
+    <span class="chip">Adult education</span>
+    <span class="chip">Against untouchability</span>
+    <span class="chip">Government schemes</span>
+    <span class="chip">Road safety</span>
   </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery" style="padding-top:0">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Photographs &amp; Videos</p>
+      <h2 class="section-title">Gallery</h2>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" id="tabPhotos" role="tab" aria-selected="true">Photographs <sup>21</sup></button>
+    <button class="tab" id="tabVideos" role="tab" aria-selected="false">Videos <sup>2</sup></button>
+  </div>
+
+  <div class="panel" id="panelPhotos">
+    <div class="pgrid" id="pgrid">
+      <figure class="ph"><img src="images/g2.jpg" loading="lazy" alt="A live puppet performance for schoolchildren behind the blue stage curtain"><figcaption>A Rainbow Puppetry show in progress — a hall full of schoolchildren.</figcaption></figure>
+      <figure class="ph"><img src="images/g1.jpg" loading="lazy" alt="Glove puppets peeking over the Rainbow Puppetry stage curtain"><figcaption>The stage — two characters take their positions above the curtain.</figcaption></figure>
+      <figure class="ph"><img src="images/g5.jpg" loading="lazy" alt="Two puppet characters above the curtain, mid-performance"><figcaption>Mid-performance.</figcaption></figure>
+      <figure class="ph"><img src="images/g6.jpg" loading="lazy" alt="A classroom puppetry session — teachers and visitors holding glove puppets before the children"><figcaption>A classroom session — teachers holding the puppets, children watching.</figcaption></figure>
+      <figure class="ph"><img src="images/g8.jpg" loading="lazy" alt="Dr. Dhanaraj addressing students in front of the Rainbow Puppetry stage"><figcaption>Dr. Dhanaraj addressing the audience before a show.</figcaption></figure>
+      <figure class="ph"><img src="images/g3.jpg" loading="lazy" alt="Two glove puppets beside the CCRT Two Fools booklet"><figcaption>Two of the company, beside the CCRT booklet from the Delhi days.</figcaption></figure>
+      <figure class="ph"><img src="images/g4.jpg" loading="lazy" alt="Dr. Dhanaraj honoured with a shawl by Rotary Dharapuram"><figcaption>Honoured with a shawl at Rotary Mahal by Rotary Dharapuram.</figcaption></figure>
+      <figure class="ph"><img src="images/g7.jpg" loading="lazy" alt="The Kalai Mudhumani award conferred by the Government of Tamil Nadu"><figcaption>The Kalai Mudhumani, Government of Tamil Nadu, 2023.</figcaption></figure>
+      <figure class="ph"><img src="images/g9.jpg" loading="lazy" alt="Dr. Dhanaraj speaking at a school programme"><figcaption>Addressing students before a show — Govt. Higher Secondary School, Dhalavaipattinam, October 2025.</figcaption></figure>
+      <figure class="ph"><img src="images/g10.jpg" loading="lazy" alt="Dr. Dhanaraj addressing the audience at a Rainbow Puppetry programme"><figcaption>Every show begins with a word — the teacher never quite leaves the puppeteer.</figcaption></figure>
+      <figure class="ph"><img src="images/g11.jpg" loading="lazy" alt="A memento being presented at a school puppetry programme"><figcaption>A memento of thanks at a school programme, before the Rainbow Puppetry stage.</figcaption></figure>
+      <figure class="ph"><img src="images/g12.jpg" loading="lazy" alt="Dr. Dhanaraj with women holding hand puppets outside the Real Old Age Home, Dharapuram"><figcaption>At the Real Old Age Home, Dharapuram — residents trained to bring the puppets to life themselves.</figcaption></figure>
+      <figure class="ph"><img src="images/g14.jpg" loading="lazy" alt="Dr. Dhanaraj speaking to children at a Human Welfare and Development Trust session"><figcaption>A session for children with the Human Welfare and Development Trust — the Rainbow Puppetry curtain behind.</figcaption></figure>
+      <figure class="ph"><img src="images/g15.jpg" loading="lazy" alt="Dr. Dhanaraj with Rotary Dharapuram members at a felicitation"><figcaption>With members of Rotary Dharapuram at a felicitation evening.</figcaption></figure>
+      <figure class="ph"><img src="images/g16.jpg" loading="lazy" alt="Two glove puppets performing above the Rainbow Puppetry curtain at Rotary Mahal"><figcaption>Two characters in mid-argument above the curtain — Rotary Mahal, Dharapuram.</figcaption></figure>
+      <figure class="ph"><img src="images/g17.jpg" loading="lazy" alt="Families gathered at a Pulse Polio camp beside the Rainbow Puppetry stage"><figcaption>Pulse Polio camp — the Puppetry Corner draws the families in, the drops protect the children.</figcaption></figure>
+      <figure class="ph"><img src="images/g18.jpg" loading="lazy" alt="Polio drops being administered to a child at the Rainbow Puppetry corner"><figcaption>Polio drops at the Puppetry Corner — Rotary's End Polio campaign, with the puppets as crowd-gatherers.</figcaption></figure>
+      <figure class="ph"><img src="images/g19.jpg" loading="lazy" alt="Dr. Dhanaraj in Rotary End Polio shirt at a vaccination booth"><figcaption>On duty in Rotary's End Polio red — service and showmanship at the same table.</figcaption></figure>
+      <figure class="ph"><img src="images/g20.jpg" loading="lazy" alt="A child receiving polio drops beside the Rainbow Puppetry banner"><figcaption>One more child protected, beneath the Rainbow Puppetry banner.</figcaption></figure>
+      <figure class="ph"><img src="images/g21.jpg" loading="lazy" alt="A hall of schoolchildren waiting for the puppet show to begin"><figcaption>The best audience in the world, waiting for the curtain.</figcaption></figure>
+      <figure class="ph"><img src="images/g22.jpg" loading="lazy" alt="The Rainbow Puppetry stage curtain with two puppets above it"><figcaption>The stage stands ready — two characters take their positions.</figcaption></figure>
+    </div>
+    <p class="tap-hint">Tap any photograph to view — then swipe for the next</p>
+  </div>
+
+  <div class="panel hidden" id="panelVideos">
+    <figure class="video-item">
+      <video src="videos/show.mp4" controls preload="metadata" poster="images/video-poster.jpg" playsinline></video>
+      <figcaption>
+        <span>A performance by Dr. N. Dhanaraj</span>
+        <span>Rainbow Puppetry · Dharapuram</span>
+      </figcaption>
+    </figure>
+    <figure class="video-item">
+      <video src="videos/show2.mp4" controls preload="metadata" poster="images/video2-poster.jpg" playsinline></video>
+      <figcaption>
+        <span>The puppets at work — a school show</span>
+        <span>Rainbow Puppetry · Dharapuram</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ARCHIVE & DOWNLOADS -->
+<section class="section" id="archive-dl">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Open archive</p>
+      <h2 class="section-title">Archive &amp; Downloads</h2>
+    </div>
+    <p class="section-note">Photographs from four decades of Rainbow Puppetry — free to view, free to download.</p>
+  </div>
+  <div class="rule"></div>
+
+  <div class="dl-bar">
+    <a class="dl-all" href="https://github.com/balaji4929/dhanaraj-website/archive/refs/heads/main.zip">Download complete archive (ZIP)</a>
+    <span class="dl-count" id="archCount"></span>
+  </div>
+
+  <div class="pgrid" id="archGrid" aria-live="polite"></div>
+  <p class="arch-note" id="archNote">Loading the archive…</p>
 </section>
 
 <!-- WORDS -->
@@ -569,50 +738,187 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
+<!-- EDDY TRUST -->
+<section class="section trust" id="trust">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">The trust behind the shows</p>
+      <h2 class="section-title">Eddy Trust, Dharapuram</h2>
+    </div>
+    <p class="section-note">A registered charitable trust · Regd. No. 12/W/0042258 · Established 2011</p>
+  </div>
+  <div class="rule"></div>
+
+  <div class="trust-grid">
+    <div>
+      <p>The trust is named in loving memory of Edwin Paul Nathaniel — Dr. Dhanaraj's son, who was lost in an accident in the river Amaravathy. His name now travels with every free show, and with every student the trust helps to study.</p>
+      <p>Registered on 10 October 2011 at Dharapuram, Eddy Trust supports the educational needs of deserving school and college students, has provided provisions to Lister Home, Dharapuram, and carries Rainbow Puppetry's performances to audiences entirely free of cost.</p>
+      <div class="trust-contact">
+        Email — <a href="mailto:eddytrust@gmail.com">eddytrust@gmail.com</a><br>
+        Phone — <a href="tel:+919442572270">+91 94425 72270</a>
+      </div>
+    </div>
+    <div>
+      <div class="trustees-title">Board of Trustees</div>
+      <div class="trustees">
+        <div class="trustee"><span>Dr. N. Dhanaraj</span><em>President</em></div>
+        <div class="trustee"><span>Mrs. Inbaruby Jayakumari</span><em>Treasurer</em></div>
+        <div class="trustee"><span>Mr. Sam Jebakumar</span><em>Secretary</em></div>
+        <div class="trustee"><span>Mr. Y. James Karunakaran</span><em>Trustee</em></div>
+        <div class="trustee"><span>Mr. Stephen</span><em>Trustee</em></div>
+        <div class="trustee"><span>Mr. Dennisraj</span><em>Trustee</em></div>
+        <div class="trustee"><span>Mr. J. Nelson</span><em>Trustee</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING -->
 <section class="section closing">
   <p class="eyebrow">The People's Padma</p>
   <h2 class="section-title">Forty-four years of giving<br>an art form <em>its breath</em></h2>
-  <p class="closing-note">Shri N. Dhanaraj has been recommended for the Padma Shri 2027 in recognition of his lifelong, selfless preservation of Thol Bommalattam. Follow the work, or write to say hello.</p>
+  <p class="closing-note">Dr. N. Dhanaraj has been recommended for the Padma Shri 2027 in recognition of his lifelong, selfless preservation of Thol Bommalattam. Enquiries and goodwill reach him through Eddy Trust, Dharapuram.</p>
   <div class="socials">
-    <a class="social" href="#">YouTube</a>
-    <a class="social" href="#">Instagram</a>
-    <a class="social" href="mailto:contact@example.com">Write to us</a>
+    <a class="social" href="mailto:eddytrust@gmail.com">Write to Eddy Trust</a>
+    <a class="social" href="tel:+919442572270">Call +91 94425 72270</a>
   </div>
 </section>
 
 <footer class="footer">
-  <span>© Shri N. Dhanaraj · Dharapuram, Tamil Nadu</span>
+  <span>© Dr. N. Dhanaraj · Dharapuram, Tamil Nadu</span>
   <span>Puppeteer · Teacher · Keeper of Thol Bommalattam</span>
 </footer>
 
+
 <script>
+/* tabs */
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce) return;
+  var tp = document.getElementById('tabPhotos'), tv = document.getElementById('tabVideos');
+  var pp = document.getElementById('panelPhotos'), pv = document.getElementById('panelVideos');
+  if(!tp) return;
+  function activate(photo){
+    tp.classList.toggle('active',photo); tv.classList.toggle('active',!photo);
+    tp.setAttribute('aria-selected',photo); tv.setAttribute('aria-selected',!photo);
+    pp.classList.toggle('hidden',!photo); pv.classList.toggle('hidden',photo);
+    if(photo){ var vid = pv.querySelector('video'); if(vid) vid.pause(); }
+  }
+  tp.addEventListener('click',function(){activate(true)});
+  tv.addEventListener('click',function(){activate(false)});
+})();
 
-  var bar = document.getElementById('crossbar');
-  var words = document.querySelectorAll('.word');
-
-  words.forEach(function(w,i){
-    w.style.transform = 'rotate(' + (i%2 ? 5 : -5) + 'deg)';
-    setTimeout(function(){ w.style.transform = 'rotate(0deg)'; }, 260 + i*160);
+/* shared full-screen viewer */
+var Viewer = (function(){
+  var lb = document.getElementById('lightbox');
+  var im = document.getElementById('lbImg'), cap = document.getElementById('lbCap'),
+      cnt = document.getElementById('lbCount'), dl = document.getElementById('lbDl'),
+      closeBtn = document.getElementById('lbClose'),
+      prevBtn = document.getElementById('lbPrev'), nextBtn = document.getElementById('lbNext');
+  var items = [], idx = 0;
+  function show(i){
+    idx = (i + items.length) % items.length;
+    var it = items[idx];
+    im.src = it.src; im.alt = it.alt || '';
+    cap.textContent = it.caption || '';
+    cnt.textContent = (idx+1) + ' / ' + items.length;
+    dl.href = it.src;
+    dl.setAttribute('download', it.name || 'photo.jpg');
+  }
+  function open(list, i){
+    items = list;
+    show(i);
+    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function shut(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  closeBtn.addEventListener('click',shut);
+  prevBtn.addEventListener('click',function(e){ e.stopPropagation(); show(idx-1); });
+  nextBtn.addEventListener('click',function(e){ e.stopPropagation(); show(idx+1); });
+  lb.addEventListener('click',function(e){ if(e.target===lb) shut(); });
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') shut();
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
   });
+  var sx=null;
+  lb.addEventListener('touchstart',function(e){ sx = e.touches[0].clientX; },{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(sx===null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if(Math.abs(dx) > 45){ dx < 0 ? show(idx+1) : show(idx-1); }
+    sx=null;
+  },{passive:true});
+  return { open: open };
+})();
 
-  var raf;
-  window.addEventListener('mousemove', function(e){
-    if(raf) return;
-    raf = requestAnimationFrame(function(){
-      raf = null;
-      var t = ((e.clientX / window.innerWidth) - .5) * 8;
-      bar.style.transform = 'rotate(' + t + 'deg)';
-      words.forEach(function(w,i){
-        w.style.transitionDuration = (1 + i*0.35) + 's';
-        w.style.transform = 'rotate(' + (t * (0.5 - i*0.1)) + 'deg)';
-      });
+/* curated gallery binding */
+(function(){
+  var figs = Array.prototype.slice.call(document.querySelectorAll('#pgrid .ph'));
+  var list = figs.map(function(f){
+    var img = f.querySelector('img'), fc = f.querySelector('figcaption');
+    return { src: img.getAttribute('src'), alt: img.alt, caption: fc ? fc.textContent : '', name: img.getAttribute('src').split('/').pop() };
+  });
+  figs.forEach(function(f,i){ f.addEventListener('click',function(){ Viewer.open(list,i); }); });
+})();
+
+/* auto-archive: lists whatever is inside the repo's /archive folder */
+(function(){
+  var grid = document.getElementById('archGrid'), note = document.getElementById('archNote'),
+      count = document.getElementById('archCount');
+  if(!grid) return;
+  var API = 'https://api.github.com/repos/balaji4929/dhanaraj-website/contents/archive';
+  var exts = /\.(jpe?g|png|webp|gif)$/i;
+  fetch(API).then(function(r){
+    if(!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(function(data){
+    var files = (Array.isArray(data)?data:[]).filter(function(f){ return f.type==='file' && exts.test(f.name); });
+    if(!files.length){
+      note.textContent = 'The archive is being prepared — photographs will appear here soon.';
+      return;
+    }
+    files.sort(function(a,b){ return a.name.localeCompare(b.name); });
+    var list = files.map(function(f){
+      return { src: 'archive/' + f.name, alt: 'Archive photograph — ' + f.name, caption: '', name: f.name };
     });
+    files.forEach(function(f,i){
+      var fig = document.createElement('figure');
+      fig.className = 'ph';
+      var img = document.createElement('img');
+      img.loading = 'lazy';
+      img.src = 'archive/' + f.name;
+      img.alt = 'Archive photograph';
+      fig.appendChild(img);
+      fig.addEventListener('click',function(){ Viewer.open(list,i); });
+      grid.appendChild(fig);
+    });
+    note.textContent = 'Tap any photograph to view full size — the Download button saves the original.';
+    count.textContent = files.length + ' photographs';
+  }).catch(function(){
+    note.textContent = 'The archive could not be loaded right now — please refresh, or use the Download complete archive button above.';
+  });
+})();
+
+/* mobile menu */
+(function(){
+  var btn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    btn.classList.toggle('open'); menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ btn.classList.remove('open'); menu.classList.remove('open'); });
   });
 })();
 </script>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <a class="lb-dl" id="lbDl" href="" download>Download</a>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">←</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">→</button>
+  <p class="lb-cap" id="lbCap"></p>
+  <p class="lb-count" id="lbCount"></p>
+</div>
 </body>
 </html>
