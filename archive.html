@@ -132,6 +132,9 @@ body::before{
   filter:saturate(.94);
   transition:transform .7s var(--ease),filter .7s var(--ease);
 }
+/* documents are full-page scans: show them taller and uncropped */
+.item.doc img{aspect-ratio:3/4;object-fit:contain;background:#fff;filter:none}
+.item.doc:hover img{transform:scale(1.02)}
 .item:hover img{transform:scale(1.05);filter:saturate(1)}
 .item::after{
   content:"View";position:absolute;left:13px;bottom:11px;z-index:2;
@@ -141,7 +144,8 @@ body::before{
 }
 .item:hover::after{opacity:1;transform:none}
 .item figcaption{display:none}
-.empty{padding:60px 0;color:var(--gray);font-size:14px}
+.empty{padding:70px 0;color:var(--gray);font-size:15px;max-width:52ch}
+.empty strong{display:block;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--ink);font-weight:500;margin-bottom:10px}
 
 /* lightbox */
 .lightbox{
@@ -209,7 +213,7 @@ body::before{
 <header class="head">
   <p class="eyebrow">The complete collection</p>
   <h1>The <em>Archive</em></h1>
-  <p class="lede">Forty-four years of Rainbow Puppetry, gathered in one place — performances, classrooms, honours and the everyday work of keeping Thol Bommalattam alive. The collection continues to grow as more photographs are recovered.</p>
+  <p class="lede">Forty-four years of Rainbow Puppetry, gathered in one place. Alongside the photographs sit the original printed invitations and programme sheets — from village churches, schools, universities and government campaigns — each one recording a puppet show by Dr. Dhanaraj. The collection continues to grow.</p>
   <div class="rule"></div>
 </header>
 
@@ -220,7 +224,10 @@ body::before{
 
 <div class="wrap">
   <div class="agrid" id="agrid"></div>
-  <p class="empty" id="empty" style="display:none">No photographs in this category yet.</p>
+  <p class="empty" id="empty" style="display:none">
+    <strong>The archive is being prepared.</strong>
+    Photographs from forty-four years of Rainbow Puppetry are currently being gathered, sorted and captioned. They will appear here as the collection is completed.
+  </p>
 </div>
 
 <footer class="footer">
@@ -256,45 +263,79 @@ body::before{
    ═══════════════════════════════════════════════════════════════ */
 
 const ARCHIVE = [
-  { src:"images/g2.jpg",  cat:"performances", caption:"A Rainbow Puppetry show in progress — a hall full of schoolchildren." },
-  { src:"images/g1.jpg",  cat:"performances", caption:"The stage — two characters take their positions above the curtain." },
-  { src:"images/g5.jpg",  cat:"performances", caption:"Mid-performance." },
-  { src:"images/g6.jpg",  cat:"classrooms",   caption:"A classroom session — teachers holding the puppets, children watching." },
-  { src:"images/g8.jpg",  cat:"performances", caption:"Dr. Dhanaraj addressing the audience before a show." },
-  { src:"images/g3.jpg",  cat:"archival",     caption:"Two of the company, beside the CCRT booklet from the Delhi days." },
-  { src:"images/g4.jpg",  cat:"honours",      caption:"Honoured with a shawl by Rotary Dharapuram." },
-  { src:"images/g7.jpg",  cat:"honours",      caption:"The Kalai Mudhumani, Government of Tamil Nadu, 2023." },
 
-  { src:"images/g9.jpg",  cat:"performances", caption:"" },
-  { src:"images/g10.jpg", cat:"performances", caption:"" },
-  { src:"images/g11.jpg", cat:"performances", caption:"" },
-  { src:"images/g12.jpg", cat:"performances", caption:"" },
-  { src:"images/g14.jpg", cat:"performances", caption:"" },
-  { src:"images/g15.jpg", cat:"performances", caption:"" },
-  { src:"images/g16.jpg", cat:"performances", caption:"" },
-  { src:"images/g17.jpg", cat:"performances", caption:"" },
-  { src:"images/g18.jpg", cat:"performances", caption:"" },
-  { src:"images/g19.jpg", cat:"performances", caption:"" },
-  { src:"images/g20.jpg", cat:"performances", caption:"" },
-  { src:"images/g21.jpg", cat:"performances", caption:"" },
-  { src:"images/g22.jpg", cat:"performances", caption:"" },
+  { src:"images/doc50.jpg", cat:"documents", caption:"Sthothira Pandigai (Thanksgiving Festival), C.S.I. Holy Thomas Pastorate, Dharapuram — 2 to 10 September 1989. Under “Christian Puppet Show” the programme names Bro. Dhanaraj, B.A., Dharapuram. This is the earliest document in the collection." },
+  { src:"images/doc36.jpg", cat:"documents", caption:"Sthothira Pandigai (Thanksgiving Festival), C.S.I. Holy Thomas Pastorate, Dharapuram — 1 to 13 September 1991. N. Dhanaraj, B.A., B.Ed. signs as Pastorate Secretary, and the arts programme lists his spiritual puppet show." },
+  { src:"images/doc02.jpg", cat:"documents", caption:"Christmas Festival invitation, C.S.I. Holy Thomas Church, Agraharam, Dharapuram — 25 December 1991. The programme lists the puppet show by N. Dhanaraj, M.A., B.Ed., National Award-winning teacher." },
+  { src:"images/doc31.jpg", cat:"documents", caption:"18th Annual Sri Murugan Theertha Kavadi, Nanjundapuram — March 1992. The programme records that on the night of 18 March, a social drama puppet show (Puppet Show) by Thiru N. Dhanaraj, B.A., B.Ed. would be performed." },
+  { src:"images/doc15.jpg", cat:"documents", caption:"Family Festival invitation, C.S.I. Holy Thomas Pastorate, Dharapuram — August 1992. Records the Christian spiritual puppet show conducted by N. Dhanaraj at Gowndachipudur on 15 August 1992." },
+  { src:"images/doc07.jpg", cat:"documents", caption:"Sthothira Pandigai (Thanksgiving Festival) 1992, C.S.I. Holy Thomas Pastorate, Dharapuram. The closing note records the Christian spiritual puppet show by N. Dhanaraj at Thekkalur on the night of 11 October 1992." },
+  { src:"images/doc03.jpg", cat:"documents", caption:"Holy Week Gospel meetings, C.S.I. Christ Church, Karaikal — 3 to 8 April 1993. N. Dhanaraj of Dharapuram is listed for the puppet show on the opening days." },
+  { src:"images/doc06.jpg", cat:"documents", caption:"Christmas Festival 1993, Holy Thomas Church, Dharapuram — the 25th victory production. N. Dhanaraj, M.A., B.Ed. appears in the felicitation list and for the humorous puppet play." },
+  { src:"images/doc49.jpg", cat:"documents", caption:"Lenten season worship meetings 1994, C.S.I. Holy Thomas Pastorate, Dharapuram. The puppetry arts programme is “Esther”, the drama by N. Dhanaraj, M.A., M.Ed., performed at Kolinjivadi and Thekkalur on 27 March 1994." },
+  { src:"images/doc29.jpg", cat:"documents", caption:"Holy Week and Easter services, C.S.I. Kangeyam Pastorate — March–April 1994. The evening of 28 March 1994 is given to “Esther’s History — Puppet Show” by Thiru Dhanaraj (Teacher), Dharapuram." },
+  { src:"images/doc05.jpg", cat:"documents", caption:"Famine Day ’94 — Bethel Welfare Centre, Manakkadavu, 30 September to 1 October 1994. The cultural programme closes with the puppet show by N. Dhanaraj, M.A., B.Ed., Headmaster." },
+  { src:"images/doc41.jpg", cat:"documents", caption:"Bharathiar University National Service Scheme special camp — 6 to 15 October 1994. The evening of 9 October is given to the puppet show by Thiru N. Dhanaraj, with district medical officers attending the health sessions." },
+  { src:"images/doc46.jpg", cat:"documents", caption:"Family Festival 1994, C.S.I. Holy Thomas Pastorate, Dharapuram — 4 to 13 November 1994. Thiru N. Dhanaraj, M.A., M.Ed. is listed for the puppetry arts programme on the Sunday night at 9.30." },
+  { src:"images/doc25.jpg", cat:"documents", caption:"Arivoli Iyakkam (Literacy Movement) festival, Chinnakampalayam village — 9 November 1994. Periyar District, Dharapuram Block. The puppet show programme is arranged by Thiru N. Dhanaraj, M.A., M.Ed., Headmaster and Chairman of the literacy movement puppet troupe." },
+  { src:"images/doc12.jpg", cat:"documents", caption:"Kalai Vizha (Arts Festival) invitation, Dharapuram — 28 November 1994. Competitions in drama, folk song, mime and elocution, with N. Dhanaraj, M.A., M.Ed. named among the organisers." },
+  { src:"images/doc27.jpg", cat:"documents", caption:"Periyar District Arivoli Iyakkam conference, cycle rally and arts festival, Puthur Sathiram — 10 December 1994. The arts programme is arranged by Thiru N. Dhanaraj, M.A., M.Ed., with his literacy-movement puppet show." },
+  { src:"images/doc47.jpg", cat:"documents", caption:"New Year Festival 1995, Yesu Nathar Kalai Arangam, Dharapuram — 1 January 1995, the 26th victory production. N. Dhanaraj, M.A., M.Ed. gives the welcome address and presents the comedy puppet show “இவர்கள் இப்படித்தான்”." },
+  { src:"images/doc32.jpg", cat:"documents", caption:"Bharathiar University National Service Scheme special camp, Varappalayam — 17 to 26 February 1995. On National Integration Day, 24 February, the literacy movement puppet show is conducted by Thiru N. Dhanaraj, M.A., M.Ed." },
+  { src:"images/doc04.jpg", cat:"documents", caption:"Christmas Festival, C.S.I. church grounds, Avanashipalayam — 28 December 1995. The programme lists the Puppet Show by N. Dhanaraj, M.A., B.Ed., Central Award-winning teacher, Dharapuram." },
+  { src:"images/doc11.jpg", cat:"documents", caption:"Christmas & New Year Festival 1995–96, C.S.I. Holy Thomas Pastorate, Dharapuram — the 27th victory production. N. Dhanaraj, M.A., M.Ed. gives the welcome address and presents the comedy puppet show." },
+  { src:"images/doc55.jpg", cat:"documents", caption:"National Science Week 1996 — Rural Institute for Community Education (RICE), Kundadam, sponsored by the Tamil Nadu State Council for Science and Technology. Theme: health, hygiene, environment, food adulteration and appropriate technology. The puppet show by N. Dhanaraj is listed at Government Middle School, Manoor Palayam." },
+  { src:"images/doc60.jpg", cat:"documents", caption:"Periyar District Continuing Education Movement, Dharapuram — 2 October 1996. Public awareness meeting and arts programme; Thiru N. Dhanaraj, M.A., M.Ed. is listed for the puppet show." },
+  { src:"images/doc35.jpg", cat:"documents", caption:"Christmas 1996 & New Year 1997 Festival, C.S.I. Holy Thomas Church, Agraharam, Dharapuram — the 51st production. N. Dhanaraj, M.A., M.Ed. gives the welcome address, and the evening of 27 December 1996 is given to the puppet show by the National Award-winning teacher." },
+  { src:"images/doc56.jpg", cat:"documents", caption:"National Science Week 1997 — RICE, Kundadam, Periyar District. Theme: Herbal Medicine. The programme for 18 February 1997 records “பொம்மலாட்டம் — N. DHANARAJ” at the Government Primary School, Idaiyankinaru." },
+  { src:"images/doc22.jpg", cat:"documents", caption:"International Women’s Day celebration, MYRADA Kermalam Area Development Project, Arepalayam — 27 March 1997. The arts programme lists the puppet show (பொம்மலாட்டம்) by N. Dhanaraj of RICE, Kundadam." },
+  { src:"images/doc52.jpg", cat:"documents", caption:"Independence Day Golden Jubilee 1997 — school celebration, 15 August 1997. The arts programme records the “பொம்மலாட்டம்” by Thiru N. Dhanaraj, Headmaster." },
+  { src:"images/doc13.jpg", cat:"documents", caption:"Independence Day Golden Jubilee, Dharapuram Taluk — 14 to 31 August 1997. Government commemorative programme; the puppet show is entered against Thiru. Dhanaraj, Headmaster." },
+  { src:"images/doc58.jpg", cat:"documents", caption:"Erode District, Kodumudi Panchayat Union 50th Independence Day festival — 21 August 1997, Kodumudi. Thiru Ne. Dhanaraj, M.A., M.Ed. is named in the arts programme." },
+  { src:"images/doc59.jpg", cat:"documents", caption:"AIDS Awareness Fortnight, Rotary Club of Dharapuram — 29 November to 5 December 1997. On both 3 and 5 December the AIDS awareness puppet show is to be given by Teacher Dhanaraj, on behalf of the Rural Institute for Community Education, Kundadam." },
+  { src:"images/doc39.jpg", cat:"documents", caption:"Programme sheet for 30 May 1998 — the arts events for the day open with the puppet show by Thiru N. Dhanaraj, M.A., B.Ed." },
+  { src:"images/doc09.jpg", cat:"documents", caption:"National Environment Awareness Campaign 1998 — Rural Institute for Community Education (RICE), Kundadam, Erode District. The village programme for 16 May 1998 at Rajiv Nagar lists the puppet show by Thiru. Dhanaraj, Headmaster, Dharapuram." },
+  { src:"images/doc42.jpg", cat:"documents", caption:"Christmas 1998 & New Year 1999 Festival, C.S.I. Holy Thomas Pastorate, Dharapuram — the 35th victory production. N. Dhanaraj, M.A., M.Ed. gives the welcome address; the night of 27 December 1998 is given to the puppetry arts programme by the National Award-winning teacher." },
+  { src:"images/doc26.jpg", cat:"documents", caption:"Nutrition and health improvement camp, Nanjiyampalayam — 12 to 21 February 1999, Tamil Nadu Integrated Nutrition Project, Dharapuram Block. The evening of 15 February closes with a special “Puppet Show” by N. Dhanaraj, M.A., M.Ed." },
+  { src:"images/doc08.jpg", cat:"documents", caption:"Bharathiar University National Service Scheme special camp, Ponnanpuram — 26 February to 7 March 1999. The evening programme closes with the puppet show by N. Dhanaraj, M.A., M.Ed., Dharapuram." },
+  { src:"images/doc51.jpg", cat:"documents", caption:"Puppet show tour, 15 to 23 March 1999 — REEDS, Dharapuram. A printed schedule listing Thiru N. Dhanraj, M.A., M.Ed., Headmaster, K.C. Palayam, as giving the Puppet Show across Chinnakkampalayam, Varappalayam, Kuppichipalayam and Dharapuram, alongside the Tamil Nadu Environment Council convenor." },
+  { src:"images/doc28.jpg", cat:"documents", caption:"AIDS Awareness Seminar, Government Primary Health Centre, Kundadam — 27 March 1999. Public health seminar with district medical officers; the closing arts programme is the awareness puppet show." },
+  { src:"images/doc38.jpg", cat:"documents", caption:"AIDS Awareness Seminar, Chinnakampalayam — 26 March 1999. Government Primary Health Centre programme; the arts programme lists the puppet show by Thiru N. Dhanaraj." },
+  { src:"images/doc53.jpg", cat:"documents", caption:"District-level women’s development conference, Dharapuram — 30 March 1999. Government programme on women’s welfare and health; Thiru M. Dhanaraj, M.A., B.Ed. and troupe are listed for the puppet show from 3.00 to 4.00 p.m." },
+  { src:"images/doc23.jpg", cat:"documents", caption:"AIDS Prevention Awareness Seminar for members of Dharapuram Municipality — 13 April 1999, Chamber of Commerce Wedding Hall, Dharapuram. The session from 3.15 to 4.15 p.m. is “AIDS Awareness Puppet Show” by Thiru M. Dhanaraj and troupe, Dharapuram." },
+  { src:"images/doc37.jpg", cat:"documents", caption:"Community Valaikappu (baby-shower) festival, Nathakadaiyur, Kangeyam Block — 21 March 2000. The arts programme opens with the puppet show by Thiru Dhanaraj, Headmaster, RICE Institute, Kundadam." },
+  { src:"images/doc19.jpg", cat:"documents", caption:"School Annual Day invitation, Government Primary School, Chettipalayam — 27 April 2000. The cultural programme records the puppet show by Thiru. N. Dhanaraj, M.A., M.Ed." },
+  { src:"images/doc45.jpg", cat:"documents", caption:"Opening of the new office building, Rural Institute for Community Education (RICE), Nanjiyampalayam — 26 August 2000. The arts programme is “தாய் அமுது — பொம்மலாட்டம்” (Mother’s Nectar — Puppet Show) by Thiru N. Dhanraj, Headmaster, Dharapuram, with teachers and children of the E.C.E. project." },
+  { src:"images/doc43.jpg", cat:"documents", caption:"“பாரதி மாதிரி” campaign for children denied schooling — 27 January 2001, Dharapuram. Organised with SACCS and the child labour welfare centre; the arts programme includes the child-labour awareness puppet show." },
+  { src:"images/doc44.jpg", cat:"documents", caption:"World Population Day observance — 11 July 2001, Dharapuram. Government rally and seminar with the District Family Welfare Office, Erode; the programme includes a family health exhibition and a puppet show arts programme." },
+  { src:"images/doc18.jpg", cat:"documents", caption:"Independence Day 2001, Panchayat Union Middle School, Thoppampatti — 15 August 2001. N. Dhanaraj, M.A., M.Ed. gives the welcome address, and the cultural programme features his puppet show and historical drama." },
+  { src:"images/doc54.jpg", cat:"documents", caption:"Annual Day, Panchayat Union Primary School — 16 January 2002. The arts programme lists the “பொம்மலாட்டம்” by Thiru N. Dhanaraj, M.A., M.Ed., Headmaster, Thoppampatti." },
+  { src:"images/doc33.jpg", cat:"documents", caption:"Annual Day, Sakthi Matriculation School, Kalaimman Kovil Street, Dharapuram — 9 March 2002. Under Special Programmes the card announces “Puppet Show by Mr. N. Dhanaraj, M.A., M.Ed., Headmaster and Resource Person, Dharapuram”." },
+  { src:"images/doc14.jpg", cat:"documents", caption:"Annual Day invitation, Panchayat Union Middle School, Thoppampatti — 15 April 2002. Thiru. Ne. Dhanaraj, M.A., M.Ed., Headmaster, receives the guests; the arts programme includes his puppet show." },
+  { src:"images/doc57.jpg", cat:"documents", caption:"School arts programme, Dharapuram — 2002. Under the arts events the card lists “அற்புத ஒளி — ஒளி நிழற்சி”, a shadow-and-light puppet performance given by Thiru N. Dhanaraj, Headmaster." },
+  { src:"images/doc40.jpg", cat:"documents", caption:"World AIDS Day Campaign 2002–03 — Society for Rural Improvement and Action (SRIA), Musiri, Trichy District. Theme: “Live and let live”. Programme of school competitions, exhibitions and processions across December 2002." },
+  { src:"images/doc30.jpg", cat:"documents", caption:"Uzhavar Tirunaal ’03 — NSS, Bishop Thorp College and CSC Computer Education, Dharapuram, 17 January 2003. A bio-fertilisation awareness camp; the card records “Puppet Show by Mr. Dhanraj, M.A., M.Ed., Head Master, Thoppampatti”." },
+  { src:"images/doc34.jpg", cat:"documents", caption:"Village health and nutrition awareness camp, Poonachi — 17 September 2003, Dharapuram Block. Thiru N. Dhanaraj, M.A., M.Ed. is listed for the arts programme." },
+  { src:"images/doc10.jpg", cat:"documents", caption:"Ten-day National Service Scheme special camp, C.S.I. Girls Higher Secondary School, Dharapuram — 1 to 10 October 2003. The session of 4 October 2003 is titled “Abolition of Child Labour — Puppet Show”, conducted by Thiru. N. Dhanaraj, Headmaster." },
+  { src:"images/doc16.jpg", cat:"documents", caption:"National Science Day 2004 — Society for Rural Improvement and Action (SRIA), Musiri. Seminar at Thakkaiyankarpettai Panchayat Union Middle School, 8 April 2004; Thiru. Dhanaraj, M.A., M.Ed., Headmaster, Dharapuram speaks on “Information Technology — Puppet Show”." },
+  { src:"images/doc01.jpg", cat:"documents", caption:"Sixth Annual Day and Prize Distribution, Dharapuram — 28 August 2004. Thiru. N. Dhanaraj, M.A., M.Ed. is listed in the arts programme." },
+  { src:"images/doc48.jpg", cat:"documents", caption:"Ten-day National Service Scheme special camp, C.S.I. Boys Higher Secondary School, Dharapuram — 25 September to 4 October 2004, “Youth for cleanliness”. The session of 28 September 2004 is “AIDS Awareness — Puppet Show” by Thiru Dhanaraj, M.A., M.Ed., Headmaster, Thoppampatti." },
+  { src:"images/doc24.jpg", cat:"documents", caption:"Government primary school annual day programme, Govindapuram. Under arts programmes the card announces “Sirikka — Sindhikka” (Laugh — Think), a puppet show presented by Thiru Ne. Dhanaraj, M.A., M.Ed., Headmaster, Thoppampatti, with the schoolchildren of Govindapuram." },
+  { src:"images/doc20.jpg", cat:"documents", caption:"Christmas & New Year Festival 2007–08, C.S.I. Holy Thomas Church, Agraharam, Dharapuram. Thiru. N. Dhanaraj, M.A., M.Ed., Pastorate Secretary, gives the vote of thanks, and his puppet show is scheduled for the evening of 26 December 2007." },
+  { src:"images/doc21.jpg", cat:"documents", caption:"Kamarajar Birthday — Education Development Day, C.S.I. Boys Higher Secondary School, Dharapuram — 15 July 2009. Item 8 of the programme is the பொம்மலாட்டம் by the good teacher Thiruvalar Dhanaraj, Headmaster." },
+  { src:"images/doc17.jpg", cat:"documents", caption:"Water Conservation Awareness Rally, Dharapuram Rotary Club and Innerwheel Club — 23 February 2017. The notice records that a drinking-water awareness puppet show would be performed during the rally." }
 
-  { src:"images/archival-1982.jpg", cat:"archival", caption:"CCRT Course on Puppetry for Education, New Delhi, June–July 1982." },
-  { src:"images/portrait-formal.jpg", cat:"people", caption:"Dr. N. Dhanaraj — formal portrait." },
-  { src:"images/portrait.jpg",  cat:"people",  caption:"Dr. N. Dhanaraj." },
-  { src:"images/family.jpg",    cat:"people",  caption:"At home in Dharapuram with the family." },
-  { src:"images/hero.jpg",      cat:"people",  caption:"With a glove puppet on each hand, holding the CCRT booklet." }
-
-  /* ── ADD NEW PHOTOGRAPHS BELOW THIS LINE ──
-     Remember to put a comma at the end of the line above first!
-
-     { src:"images/g23.jpg", cat:"performances", caption:"" },
-     { src:"images/g24.jpg", cat:"honours",      caption:"" },
+  /* ═══ ADD MORE HERE ═══
+     One line each. Comma at the end of every line EXCEPT the last.
+     { src:"images/doc61.jpg", cat:"documents", caption:"" },
+     Categories: documents, performances, classrooms, honours, archival, people
   */
+
 ];
 
 /* ── Nice labels for the filter buttons ── */
 const LABELS = {
+  documents:    "Invitations & programmes",
   performances: "Performances",
   classrooms:   "Classrooms & training",
   honours:      "Honours",
@@ -334,6 +375,12 @@ const LABELS = {
   filts.appendChild(makeBtn('all','All'));
   cats.forEach(function(c){ filts.appendChild(makeBtn(c, LABELS[c] || c)); });
 
+  // if the archive is empty, hide the toolbar entirely
+  if(!ARCHIVE.length){
+    var tb = document.querySelector('.toolbar');
+    if(tb) tb.style.display = 'none';
+  }
+
   // reveal items as they scroll in
   let io = null;
   if(!reduce && 'IntersectionObserver' in window){
@@ -348,12 +395,15 @@ const LABELS = {
     grid.innerHTML = '';
     shown = ARCHIVE.filter(function(o){ return current==='all' || o.cat===current; });
 
-    countEl.textContent = shown.length + (shown.length===1 ? ' photograph' : ' photographs');
+    var allDocs = shown.length && shown.every(function(o){ return o.cat === 'documents'; });
+    var noun = allDocs ? (shown.length===1 ? ' document' : ' documents')
+                       : (shown.length===1 ? ' item' : ' items');
+    countEl.textContent = shown.length + noun;
     emptyEl.style.display = shown.length ? 'none' : 'block';
 
     shown.forEach(function(o, i){
       const fig = document.createElement('figure');
-      fig.className = 'item';
+      fig.className = 'item' + (o.cat === 'documents' ? ' doc' : '');
       const img = document.createElement('img');
       img.src = o.src;
       img.loading = 'lazy';
