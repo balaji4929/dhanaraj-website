@@ -345,6 +345,13 @@ body::before{
 }
 .tap-hint{margin-top:16px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gray);font-weight:500}
 @media(min-width:961px){.tap-hint{display:none}}
+.gallery-more{margin-top:30px}
+.gallery-more a{
+  display:inline-block;border:1px solid var(--ink);color:var(--ink);
+  padding:14px 30px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  transition:background .35s var(--ease),color .35s var(--ease),transform .35s var(--ease);
+}
+.gallery-more a:hover{background:var(--ink);color:var(--bg);transform:translateY(-2px)}
 
 /* ── quotes ────────────────────────────── */
 .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(28px,5vw,64px);margin-top:56px}
@@ -448,13 +455,6 @@ body::before{
 }
 .lb-prev{left:14px}.lb-next{right:14px}
 .lb-arrow:hover{background:rgba(251,250,247,.22)}
-.dl-bar{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:36px}
-.dl-all{background:var(--ink);color:var(--bg);padding:15px 30px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;transition:background .3s}
-.dl-all:hover{background:var(--gold)}
-.dl-count{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);font-weight:500}
-.arch-note{margin-top:30px;font-size:12.5px;color:var(--gray);letter-spacing:.04em}
-.lb-dl{position:absolute;top:22px;left:26px;z-index:2;border:1px solid rgba(251,250,247,.45);color:#F4F2EC;background:rgba(251,250,247,.08);padding:10px 20px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
-.lb-dl:hover{background:rgba(251,250,247,.22)}
 .lb-count{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#8D897F;font-size:11px;letter-spacing:.24em}
 @media(max-width:640px){.lb-arrow{width:44px;height:44px}.lb-prev{left:8px}.lb-next{right:8px}}
 
@@ -562,7 +562,7 @@ body::before{
     <a href="#honours">Honours</a>
     <a href="#rainbow">Rainbow Puppetry</a>
     <a href="#gallery">Gallery</a>
-    <a href="#archive-dl">Archive</a>
+    <a href="archive.html">Archive</a>
     <a href="#trust">Eddy Trust</a>
   </div>
   <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
@@ -573,7 +573,7 @@ body::before{
   <a href="#honours">Honours</a>
   <a href="#rainbow">Rainbow Puppetry</a>
   <a href="#gallery">Gallery</a>
-  <a href="#archive-dl">Archive &amp; Downloads</a>
+  <a href="archive.html">Archive</a>
   <a href="#trust">Eddy Trust</a>
 </div>
 
@@ -861,21 +861,24 @@ body::before{
       <figure class="ph tilt"><img src="images/g3.jpg" loading="lazy" alt="Two glove puppets beside the CCRT Two Fools booklet"><figcaption>Two of the company, beside the CCRT booklet from the Delhi days.</figcaption></figure>
       <figure class="ph tilt"><img src="images/g4.jpg" loading="lazy" alt="Dr. Dhanaraj honoured with a shawl by Rotary Dharapuram"><figcaption>Honoured with a shawl by Rotary Dharapuram.</figcaption></figure>
       <figure class="ph tilt"><img src="images/g7.jpg" loading="lazy" alt="The Kalai Mudhumani award conferred by the Government of Tamil Nadu"><figcaption>The Kalai Mudhumani, Government of Tamil Nadu, 2023.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g9.jpg" loading="lazy" alt="Dr. Dhanaraj speaking at a school programme"><figcaption>Addressing students before a show — Govt. Higher Secondary School, Dhalavaipattinam, October 2025.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g10.jpg" loading="lazy" alt="Dr. Dhanaraj addressing the audience at a Rainbow Puppetry programme"><figcaption>Every show begins with a word — the teacher never quite leaves the puppeteer.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g11.jpg" loading="lazy" alt="A memento being presented at a school puppetry programme"><figcaption>A memento of thanks at a school programme, before the Rainbow Puppetry stage.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g12.jpg" loading="lazy" alt="Dr. Dhanaraj with women holding hand puppets outside the Real Old Age Home, Dharapuram"><figcaption>At the Real Old Age Home, Dharapuram — residents trained to bring the puppets to life themselves.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g14.jpg" loading="lazy" alt="Dr. Dhanaraj speaking to children at a Human Welfare and Development Trust session"><figcaption>A session for children with the Human Welfare and Development Trust.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g15.jpg" loading="lazy" alt="Dr. Dhanaraj with Rotary Dharapuram members at a felicitation"><figcaption>With members of Rotary Dharapuram at a felicitation evening.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g16.jpg" loading="lazy" alt="Two glove puppets performing above the Rainbow Puppetry curtain at Rotary Mahal"><figcaption>Two characters in mid-argument above the curtain — Rotary Mahal, Dharapuram.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g17.jpg" loading="lazy" alt="Families gathered at a Pulse Polio camp beside the Rainbow Puppetry stage"><figcaption>Pulse Polio camp — the Puppetry Corner draws the families in, the drops protect the children.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g18.jpg" loading="lazy" alt="Polio drops being administered at the Rainbow Puppetry corner"><figcaption>Polio drops at the Puppetry Corner — Rotary's End Polio campaign.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g19.jpg" loading="lazy" alt="Dr. Dhanaraj in Rotary End Polio shirt at a vaccination booth"><figcaption>On duty in Rotary's End Polio red — service and showmanship at the same table.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g20.jpg" loading="lazy" alt="A child receiving polio drops beside the Rainbow Puppetry banner"><figcaption>One more child protected, beneath the Rainbow Puppetry banner.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g21.jpg" loading="lazy" alt="A hall of schoolchildren waiting for the puppet show"><figcaption>The best audience in the world, waiting for the curtain.</figcaption></figure>
-      <figure class="ph tilt"><img src="images/g22.jpg" loading="lazy" alt="The Rainbow Puppetry stage curtain with two puppets above it"><figcaption>The stage stands ready — two characters take their positions.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g9.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g10.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g11.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g12.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g14.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g15.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g16.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g17.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g18.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g19.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g20.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g21.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
+      <figure class="ph tilt"><img src="images/g22.jpg" loading="lazy" alt="Rainbow Puppetry — from the collection of Dr. N. Dhanaraj"><figcaption>Rainbow Puppetry, Dharapuram.</figcaption></figure>
     </div>
     <p class="tap-hint">Tap any photograph to view — then swipe for the next</p>
+    <p class="gallery-more">
+      <a href="archive.html">See the full archive — every photograph, year by year →</a>
+    </p>
   </div>
 
   <div class="panel hidden" id="panelVideos">
@@ -889,7 +892,7 @@ body::before{
     <figure class="video-item">
       <video src="videos/show2.mp4" controls preload="metadata" poster="images/video2-poster.jpg" playsinline></video>
       <figcaption>
-        <span>The puppets at work — a school show</span>
+        <span>A performance by Dr. N. Dhanaraj</span>
         <span>Rainbow Puppetry · Dharapuram</span>
       </figcaption>
     </figure>
@@ -897,23 +900,6 @@ body::before{
 </section>
 
 <!-- WORDS -->
-<section class="section" id="archive-dl">
-  <div class="section-head">
-    <div>
-      <p class="eyebrow">Open archive</p>
-      <h2 class="section-title">Archive &amp; Downloads</h2>
-    </div>
-    <p class="section-note">Photographs from four decades of Rainbow Puppetry — free to view, free to download.</p>
-  </div>
-  <div class="rule"></div>
-  <div class="dl-bar">
-    <a class="dl-all" href="https://github.com/balaji4929/dhanaraj-website/archive/refs/heads/main.zip">Download complete archive (ZIP)</a>
-    <span class="dl-count" id="archCount"></span>
-  </div>
-  <div class="pgrid" id="archGrid" aria-live="polite"></div>
-  <p class="arch-note" id="archNote">Loading the archive…</p>
-</section>
-
 <section class="section" id="words" style="padding-top:0">
   <div class="section-head">
     <div>
@@ -1168,26 +1154,30 @@ setTimeout(function(){ var l=document.getElementById('loader'); if(l) l.classLis
 })();
 
 /* lightbox with prev/next + swipe */
-var Viewer = (function(){
+(function(){
   var lb = document.getElementById('lightbox');
+  if(!lb) return;
   var im = document.getElementById('lbImg'), cap = document.getElementById('lbCap'),
-      cnt = document.getElementById('lbCount'), dl = document.getElementById('lbDl'),
+      cnt = document.getElementById('lbCount'),
       closeBtn = document.getElementById('lbClose'),
       prevBtn = document.getElementById('lbPrev'), nextBtn = document.getElementById('lbNext');
-  var items = [], idx = 0;
+  var figs = Array.prototype.slice.call(document.querySelectorAll('#pgrid .ph'));
+  var idx = 0;
   function show(i){
-    idx = (i + items.length) % items.length;
-    var it = items[idx];
-    im.src = it.src; im.alt = it.alt || '';
-    cap.textContent = it.caption || '';
-    cnt.textContent = (idx+1) + ' / ' + items.length;
-    dl.href = it.src; dl.setAttribute('download', it.name || 'photo.jpg');
+    idx = (i + figs.length) % figs.length;
+    var img = figs[idx].querySelector('img');
+    var fc = figs[idx].querySelector('figcaption');
+    im.src = img.src; im.alt = img.alt;
+    cap.textContent = fc ? fc.textContent : '';
+    cnt.textContent = (idx+1) + ' / ' + figs.length;
   }
-  function open(list, i){
-    items = list; show(i);
-    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
-  }
+  figs.forEach(function(f,i){
+    f.addEventListener('click',function(){
+      show(i);
+      lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    });
+  });
   function shut(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
   closeBtn.addEventListener('click',shut);
   prevBtn.addEventListener('click',function(e){ e.stopPropagation(); show(idx-1); });
@@ -1199,6 +1189,7 @@ var Viewer = (function(){
     if(e.key==='ArrowLeft') show(idx-1);
     if(e.key==='ArrowRight') show(idx+1);
   });
+  /* swipe inside viewer */
   var sx=null;
   lb.addEventListener('touchstart',function(e){ sx = e.touches[0].clientX; },{passive:true});
   lb.addEventListener('touchend',function(e){
@@ -1207,43 +1198,6 @@ var Viewer = (function(){
     if(Math.abs(dx) > 45){ dx < 0 ? show(idx+1) : show(idx-1); }
     sx=null;
   },{passive:true});
-  return { open: open };
-})();
-
-(function(){
-  var figs = Array.prototype.slice.call(document.querySelectorAll('#pgrid .ph'));
-  var list = figs.map(function(f){
-    var img = f.querySelector('img'), fc = f.querySelector('figcaption');
-    return { src: img.getAttribute('src'), alt: img.alt, caption: fc ? fc.textContent : '', name: img.getAttribute('src').split('/').pop() };
-  });
-  figs.forEach(function(f,i){ f.addEventListener('click',function(){ Viewer.open(list,i); }); });
-})();
-
-/* auto-archive: lists whatever is inside the repo's /archive folder */
-(function(){
-  var grid = document.getElementById('archGrid'), note = document.getElementById('archNote'),
-      count = document.getElementById('archCount');
-  if(!grid) return;
-  var API = 'https://api.github.com/repos/balaji4929/dhanaraj-website/contents/archive';
-  var exts = /\.(jpe?g|png|webp|gif)$/i;
-  fetch(API).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-  .then(function(data){
-    var files = (Array.isArray(data)?data:[]).filter(function(f){ return f.type==='file' && exts.test(f.name); });
-    if(!files.length){ note.textContent = 'The archive is being prepared — photographs will appear here soon.'; return; }
-    files.sort(function(a,b){ return a.name.localeCompare(b.name); });
-    var list = files.map(function(f){ return { src:'archive/'+f.name, alt:'Archive photograph', caption:'', name:f.name }; });
-    files.forEach(function(f,i){
-      var fig = document.createElement('figure'); fig.className = 'ph tilt';
-      var img = document.createElement('img'); img.loading='lazy'; img.src='archive/'+f.name; img.alt='Archive photograph';
-      fig.appendChild(img);
-      fig.addEventListener('click',function(){ Viewer.open(list,i); });
-      grid.appendChild(fig);
-    });
-    note.textContent = 'Tap any photograph to view full size — the Download button saves the original.';
-    count.textContent = files.length + ' photographs';
-  }).catch(function(){
-    note.textContent = 'The archive could not be loaded right now — please refresh, or use the Download complete archive button above.';
-  });
 })();
 
 /* mobile menu */
@@ -1261,7 +1215,6 @@ var Viewer = (function(){
 </script>
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lb-close" id="lbClose" aria-label="Close">×</button>
-  <a class="lb-dl" id="lbDl" href="" download>Download</a>
   <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">←</button>
   <img id="lbImg" src="" alt="">
   <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">→</button>
